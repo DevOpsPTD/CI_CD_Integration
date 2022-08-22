@@ -71,8 +71,8 @@ node('node'){
          sh "aws s3 ls"
          sh "aws s3 cp addressbook_main/target/addressbook.war s3://cloudyeticicd/"
          }
-      } catch(err) {
+      } 
+      catch(err) {
          sh "echo error in sending artifacts to s3"
       }
    }
-}
